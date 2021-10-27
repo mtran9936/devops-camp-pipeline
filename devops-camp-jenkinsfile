@@ -46,8 +46,7 @@ post {
 }
 stage('Database docker build') {
 steps {
-withCredentials([usernameColonPassword(credentialsId: 'mtran-harbor-auth', 
-variable: 'HARBOR-AUTH')]) { 
+withCredentials([usernameColonPassword(credentialsId: 'mtran-harbor-auth', variable: 'HARBOR-AUTH')]) { 
   script { 
     docker.build('$DB_IMAGE_NAME-$APP_HASH', '-f ./app/Dockerfile ./afs-labs-student') 
     docker.withRegistry('https://$HARBOR_REGISTRY', 'mtran-harbor-auth') { 
