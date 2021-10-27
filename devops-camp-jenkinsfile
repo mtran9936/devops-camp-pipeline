@@ -14,9 +14,9 @@ steps {
 echo "Cloning application repository"
 sh 'git clone https://github.com/mtran9936/afs-labs-student.git'
 dir('afs-labs-student') {
-script{
-env.APP_HASH = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
-}
+	script{
+		env.APP_HASH = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+	}
 }
 }
 }
@@ -67,11 +67,7 @@ post {
 }
 
 
-// modify to build db image and push to harbor
 
-post {
-// modify to clean local db image build
-}
 }
 }
 stage('Test'){
