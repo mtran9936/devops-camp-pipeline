@@ -72,7 +72,7 @@ post {
 post {
 // modify to clean local db image build
 }
-
+}
 stage('Test'){
 steps {
 echo "Testing stage"
@@ -92,4 +92,3 @@ sh 'rm -rf .git ./*'
 }
 }
 }
-
