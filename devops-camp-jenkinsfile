@@ -65,12 +65,13 @@ post {
       } catch (err) { 
         echo err.getMessage() } } }
 }
-}
-}
+
+
 // modify to build db image and push to harbor
-}
+
 post {
 // modify to clean local db image build
+}
 }
 }
 stage('Test'){
